@@ -12,11 +12,6 @@
 
 namespace Microsoft.Deployment.WindowsInstaller.Linq.Entities
 {
-    // Silence warnings about style and doc-comments
-    #if !CODE_ANALYSIS
-    #pragma warning disable 1591
-    #region Generated code
-
     public class Component_ : QRecord
     {
         public string Component   { get { return this[0]; } set { this[0] = value; } }
@@ -153,8 +148,4 @@ namespace Microsoft.Deployment.WindowsInstaller.Linq.Entities
         public RemoveFileModes InstallMode
         { get { return (RemoveFileModes) this.I(5); } set { this[5] = ((int) value).ToString(); } }
     }
-
-    #endregion // Generated code
-    #pragma warning restore 1591
-    #endif // !CODE_ANALYSIS
 }

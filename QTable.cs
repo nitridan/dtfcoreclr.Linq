@@ -50,8 +50,9 @@ namespace Microsoft.Deployment.WindowsInstaller.Linq
         /// </remarks>
         private static string InferTableName()
         {
-            foreach (DatabaseTableAttribute attr in typeof(TRecord).GetCustomAttributes(
-                typeof(DatabaseTableAttribute), false))
+            var attributes = typeof(TRecord).GetTypeInfo()
+                    .GetCustomAttributes<DatabaseTableAttribute>(false);
+            foreach (var attr in attributes)
             {
                 string tableName = attr.Table;
                 if (!String.IsNullOrEmpty(tableName))
