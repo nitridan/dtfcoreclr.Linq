@@ -211,7 +211,7 @@ namespace Microsoft.Deployment.WindowsInstaller.Linq
                     }
                 }
 
-                QRecord result = (QRecord) this.recordTypes[i]
+                QRecord result = (QRecord) this.recordTypes[i].GetTypeInfo()
                     .GetConstructor(Type.EmptyTypes).Invoke(null);
                 result.Database = this.db;
                 result.TableInfo = this.tables[i];
@@ -944,7 +944,7 @@ namespace Microsoft.Deployment.WindowsInstaller.Linq
                 this.selectors.Add(outerKeySelector.Parameters[0].Name);
             }
 
-            PropertyInfo tableInfoProp = joinTable.GetType().GetProperty("TableInfo");
+            PropertyInfo tableInfoProp = joinTable.GetType().GetTypeInfo().GetProperty("TableInfo");
             if (tableInfoProp == null)
             {
                 throw new NotSupportedException(
