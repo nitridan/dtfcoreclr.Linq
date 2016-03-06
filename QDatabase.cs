@@ -209,10 +209,6 @@ namespace Microsoft.Deployment.WindowsInstaller.Linq
         /// <summary>Queryable standard table with predefined specialized record type.</summary>
         public QTable<Property_> Properties
         { get { return new QTable<Property_>(this); } }
-        
-        /// <summary>Queryable, runtime MSI properties, can be acessed only inside active session.</summary>
-        public QTable<Property_> RuntimeProperties
-        { get { return new QTable<Property_>(this, "_Property"); } }
 
         /// <summary>Queryable standard table with predefined specialized record type.</summary>
         public QTable<Registry_> Registries
