@@ -1,8 +1,12 @@
 # dtfcoreclr.Linq
 
-Port of QDatabase from WIX DTF framework to CoreCLR.
+Port of QDatabase from WIX DTF framework to dotnet Core.
 
-This personal fork made in order to use DTF with CoreCLR
+This personal fork made in order to use DTF with dotnet Core
+
+This fork created in order to bring features of DTF to dotnet Core.
+
+Original sources here: https://github.com/wixtoolset/wix3
 
 Build status:
 
